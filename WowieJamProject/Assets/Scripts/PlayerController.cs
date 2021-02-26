@@ -7,9 +7,10 @@ public class PlayerController : MonoBehaviour
 {
 
     [Header("Moving")]
+    public bool FreezeMovement;
     Rigidbody2D rb2d;
     Vector2 input;
-    [SerializeField] int Speed;
+    public int Speed;
 
     [Header("GroundCheck")]
     [SerializeField] Transform feet;
@@ -40,7 +41,9 @@ public class PlayerController : MonoBehaviour
         input = _input.ReadValue<Vector2>();
 
         animator.SetBool("Walk", input.x != 0);
-        spriteRenderer.flipX = input.x < 0;
+
+        if(!FreezeMovement)
+         spriteRenderer.flipX = input.x < 0;
 
     }
 
@@ -64,6 +67,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (FreezeMovement)
+        {
+            rb2d.velocity = Vector2.zero;
+            return;
+        }
+
         rb2d.velocity = new Vector2(input.x * Speed, rb2d.velocity.y);
         if (PlayerIsJumping && canJump && PlayerIsGrounded)
         {
