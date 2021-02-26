@@ -20,27 +20,41 @@ public class PlayerController : MonoBehaviour
     [Header("Jumping")]
     [SerializeField] float CoyoteTime;
     [SerializeField] int JumpForce;
+    [SerializeField] float JumpCooldown;
+    bool canJump = true;
     public bool PlayerIsJumping;
+
+    [Header("Animation")]
+    SpriteRenderer spriteRenderer;
+    Animator animator;
 
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void ChangeDirection(InputAction.CallbackContext _input)
     {
         input = _input.ReadValue<Vector2>();
+
+        animator.SetBool("Walk", input.x != 0);
+        spriteRenderer.flipX = input.x < 0;
+
     }
 
     public void Jump(InputAction.CallbackContext _input)
     {
-        if (_input.performed && PlayerIsGrounded)
-        {
+        if (!_input.canceled)
             PlayerIsJumping = true;
-            PerformJump();
-        }
         else if (_input.canceled)
             PlayerIsJumping = false;
+    }
+
+    private void ResetJump()
+    {
+        canJump = true;
     }
 
     private void PerformJump()
@@ -51,12 +65,22 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb2d.velocity = new Vector2(input.x * Speed, rb2d.velocity.y);
+        if (PlayerIsJumping && canJump && PlayerIsGrounded)
+        {
+            canJump = false;
+            Invoke("ResetJump", JumpCooldown);
+            PerformJump();
+        }
+
         GroundCheck();
     }
 
     private void GroundCheck()
     {
-        if (Physics2D.OverlapCircle(feet.position, radius, groundLayer))
+        bool grounded = Physics2D.OverlapCircle(feet.position, radius, groundLayer);
+        animator.SetBool("Jump", !grounded);
+
+        if (grounded)
             PlayerIsGrounded = true;
         else
             Invoke("ResetGroundCheck", CoyoteTime);
