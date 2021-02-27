@@ -30,11 +30,18 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator animator;
 
+    [Header("Death")]
+    [SerializeField] GameObject DeathTile;
+    bool isDying;
+    Vector2 startPos;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        startPos = transform.position;
     }
 
     public void ChangeDirection(InputAction.CallbackContext _input)
@@ -103,5 +110,26 @@ public class PlayerController : MonoBehaviour
     void ResetGroundCheck()
     {
         PlayerIsGrounded = Physics2D.OverlapCircle(feet.position, radius, groundLayer);
+    }
+
+    public void Die()
+    {
+        if (isDying) return;
+
+        isDying = true;
+
+        animator.SetTrigger("Death");
+        FreezeMovement = true;
+        transform.position = new Vector2(Mathf.RoundToInt(transform.position.x - .5f) +.5f, transform.position.y);
+        Invoke("DestroyPlayer", 1f);
+    }
+
+    void DestroyPlayer()
+    {
+        Instantiate(DeathTile, transform.position, Quaternion.identity, transform.parent);
+        transform.position = startPos;
+        isDying = false;
+        animator.SetTrigger("Alive");
+        FreezeMovement = false;
     }
 }

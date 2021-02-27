@@ -28,7 +28,7 @@ public class Launchpad : MonoBehaviour
         animator.SetTrigger("Launch");
 
         Rigidbody2D rb2d = collision.GetComponent<Rigidbody2D>();
-        if (collision.CompareTag("Player"))
+        if (collision.GetComponent<PlayerController>())
         {
             collision.GetComponentInChildren<Animator>().SetTrigger("JumpPad");
             collision.GetComponent<PlayerController>().PlayerIsLaunching = true;
