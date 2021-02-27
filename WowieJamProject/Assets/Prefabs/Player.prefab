@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9528b36dd6b304e81f49e8e9423f2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FreezeMovement: 0
   Speed: 8
   feet: {fileID: 7673448738564510853}
   groundLayer:
@@ -91,6 +92,7 @@ MonoBehaviour:
   JumpForce: 1100
   JumpCooldown: 0.3
   PlayerIsJumping: 0
+  PlayerIsLaunching: 0
 --- !u!114 &7673448738922494174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +251,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
+  m_Offset: {x: 0, y: 0.35}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -260,7 +262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99, y: 1}
+  m_Size: {x: 0.65, y: 1.1}
   m_EdgeRadius: 0
 --- !u!58 &7673448738922494175
 CircleCollider2D:
@@ -275,9 +277,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35
 --- !u!1 &7673448739196357988
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +350,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -599984423
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 4782922470049511734, guid: 725d175df91f08e499ca9a92da0e6223, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -393,6 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b114fd46b1173ac489729d1eb753402f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShadowOffset: {x: -0.1, y: 0}
+  ShadowOffset: {x: -0.1, y: -0.05}
   ShadowMaterial: {fileID: 2100000, guid: a27530f165561654996cb6d1be111d6a, type: 2}
   UpdateSprite: 1

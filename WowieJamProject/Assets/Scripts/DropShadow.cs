@@ -20,16 +20,11 @@ public class DropShadow : MonoBehaviour
         shadowGameobject.transform.parent = transform;
         shadowGameobject.transform.localPosition = Vector2.zero + ShadowOffset;
 
-        //create a new SpriteRenderer for Shadow gameobject
         shadowSpriteRenderer = shadowGameobject.AddComponent<SpriteRenderer>();
 
-        //set the shadow gameobject's sprite to the original sprite
         shadowSpriteRenderer.sprite = spriteRenderer.sprite;
-        //set the shadow gameobject's material to the shadow material we created
         shadowSpriteRenderer.material = ShadowMaterial;
 
-        //update the sorting layer of the shadow to always lie behind the sprite
-        shadowSpriteRenderer.sortingLayerName = spriteRenderer.sortingLayerName;
         shadowSpriteRenderer.sortingOrder = spriteRenderer.sortingOrder - 1;
     }
 

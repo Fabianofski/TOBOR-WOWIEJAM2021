@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float JumpCooldown;
     bool canJump = true;
     public bool PlayerIsJumping;
+    public bool PlayerIsLaunching;
 
     [Header("Animation")]
     SpriteRenderer spriteRenderer;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
     private void PerformJump()
     {
+        rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
         rb2d.AddForce(JumpForce * transform.up);
     }
 
@@ -88,6 +90,9 @@ public class PlayerController : MonoBehaviour
     {
         bool grounded = Physics2D.OverlapCircle(feet.position, radius, groundLayer);
         animator.SetBool("Jump", !grounded);
+
+        if (PlayerIsLaunching && grounded)
+            PlayerIsLaunching = false;
 
         if (grounded)
             PlayerIsGrounded = true;

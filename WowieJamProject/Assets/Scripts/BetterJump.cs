@@ -22,7 +22,7 @@ public class BetterJump : MonoBehaviour
     {
         if (rb2d.velocity.y < 0)
             rb2d.velocity += vel(fallMultiplier);
-        else if (rb2d.velocity.y > 0 && !playerController.PlayerIsJumping)
+        else if (rb2d.velocity.y > 0 && !playerController.PlayerIsJumping && !playerController.PlayerIsLaunching)
             rb2d.velocity += vel(lowJumpMultiplier);
     }
 
