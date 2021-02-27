@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: da40f0f0c4f6cfe4a9ca8da81d083839
+guid: b8d71f34d1d9092418c8e0ff95073404
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5075426869712868030
-    second: UIButton_0
+      213: 4082010342331551396
+    second: LevelComplete_0
   - first:
-      213: -612924460670876587
-    second: UIButton_1
+      213: -8324731450697749742
+    second: LevelComplete_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -71,7 +71,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -83,7 +83,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -95,7 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -107,7 +107,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -119,7 +119,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -133,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UIButton_0
+      name: LevelComplete_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 128
-        height: 32
+        y: 9
+        width: 74
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24daa4b17267099b0800000000000000
-      internalID: -5075426869712868030
+      spriteID: 4ae842867c636a830800000000000000
+      internalID: 4082010342331551396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UIButton_1
+      name: LevelComplete_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 0
-        width: 128
-        height: 32
+        width: 74
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 554809f43747e77f0800000000000000
-      internalID: -612924460670876587
+      spriteID: 21b63a61adc987c80800000000000000
+      internalID: -8324731450697749742
       vertices: []
       indices: 
       edges: []
