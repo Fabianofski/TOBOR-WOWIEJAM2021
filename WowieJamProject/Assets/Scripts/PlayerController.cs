@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animation")]
     SpriteRenderer spriteRenderer;
+    [SerializeField] GameObject Spawn;
     Animator animator;
 
     [Header("Death")]
@@ -35,12 +36,17 @@ public class PlayerController : MonoBehaviour
     bool isDying;
     Vector2 startPos;
 
+    [Header("Doorsystem")]
+    [SerializeField] LayerMask DoorLayer;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        Spawn.GetComponentInChildren<Animator>().SetTrigger("OpenDoor");
+        Spawn.GetComponentInChildren<Animator>().SetTrigger("CloseDoorBehind");
         startPos = transform.position;
     }
 
@@ -131,5 +137,18 @@ public class PlayerController : MonoBehaviour
         isDying = false;
         animator.SetTrigger("Alive");
         FreezeMovement = false;
+        Spawn.GetComponentInChildren<Animator>().SetTrigger("OpenDoor");
+        Spawn.GetComponentInChildren<Animator>().SetTrigger("CloseDoorBehind");
+    }
+
+    public void EnterDoor(InputAction.CallbackContext _context)
+    {
+        if (_context.performed)
+        {
+            Collider2D collider = Physics2D.OverlapCircle(transform.position, .5f, DoorLayer);
+            if (collider)
+                collider.GetComponent<Door>().EnterDoor(transform);
+        }
+
     }
 }

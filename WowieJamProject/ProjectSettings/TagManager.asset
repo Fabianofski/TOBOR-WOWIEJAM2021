@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - Player
   - PostProcessing
-  - 
+  - Door
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3694982873
+    locked: 0
+  - name: Door
+    uniqueID: 1829363609
     locked: 0

@@ -237,7 +237,11 @@ MonoBehaviour:
   JumpCooldown: 0.3
   PlayerIsJumping: 0
   PlayerIsLaunching: 0
+  Spawn: {fileID: 0}
   DeathTile: {fileID: 3547841486187041773, guid: 14bb318553dd93b4ca2ebd0d5701c138, type: 3}
+  DoorLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &7673448738922494174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +302,19 @@ MonoBehaviour:
     m_ActionId: 7e905d8e-b4c9-4369-947d-4f57706bc311
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7673448738922494171}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: EnterDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 45ee6d57-088c-4a27-867f-6269987e4a3d
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
