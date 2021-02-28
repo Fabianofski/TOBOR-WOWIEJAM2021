@@ -16,8 +16,8 @@ TagManager:
   - Player
   - PostProcessing
   - Door
-  - 
-  - 
+  - TransTilemap
+  - OnlyPlayerCol
   - 
   - 
   - 
