@@ -17832,6 +17832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 8882733250344706600, guid: 3d4a0e1b8591dc74da6ba5cf7b712f2d, type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4a0e1b8591dc74da6ba5cf7b712f2d, type: 3}
 --- !u!1 &1993598935
@@ -18124,6 +18128,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 1472848742635260909, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472848742635260909, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472848742635260909, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472848742635260909, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472848742635260909, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7436044529930577913, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -18183,6 +18207,14 @@ PrefabInstance:
     - target: {fileID: 7436044531329326692, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
       propertyPath: m_Name
       value: Doorsystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694751203810416502, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.654
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694751203810416502, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.078
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5f24e083f4636245b5f8e27f4d49eb5, type: 3}

@@ -33,6 +33,13 @@ public class Launchpad : MonoBehaviour
             collision.GetComponentInChildren<Animator>().SetTrigger("JumpPad");
             collision.GetComponent<PlayerController>().PlayerIsLaunching = true;
         }
+        else
+        {
+            collision.transform.parent = null;
+            Vector3 pos = collision.transform.position + transform.up * .5f;
+            collision.transform.position = pos;
+            collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
         rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
         rb2d.AddForce(transform.up * LaunchForce, ForceMode2D.Impulse);
     }

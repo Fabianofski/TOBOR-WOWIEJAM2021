@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float CoyoteTime;
     [SerializeField] int JumpForce;
     [SerializeField] float JumpCooldown;
+    [SerializeField] GameObject JumpSound;
+    [SerializeField] GameObject JumpParticle;
     bool canJump = true;
     public bool PlayerIsJumping;
     public bool PlayerIsLaunching;
@@ -76,6 +78,13 @@ public class PlayerController : MonoBehaviour
 
     private void PerformJump()
     {
+        GameObject sound = Instantiate(JumpSound, transform.position, Quaternion.identity, transform);
+        sound.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 2f);
+        Destroy(sound, 1f);
+
+        GameObject particle = Instantiate(JumpParticle, transform.position, Quaternion.identity);
+        Destroy(particle, 2f);
+
         rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
         rb2d.AddForce(JumpForce * transform.up);
     }

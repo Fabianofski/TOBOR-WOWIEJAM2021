@@ -235,6 +235,8 @@ MonoBehaviour:
   CoyoteTime: 0.2
   JumpForce: 1100
   JumpCooldown: 0.3
+  JumpSound: {fileID: 330354347049902164, guid: 4bf279b20fb87e647b6bcb67fc24ba52, type: 3}
+  JumpParticle: {fileID: 8506229549742823106, guid: a24aa8ef9ddf3474eb2831a302ca9a81, type: 3}
   PlayerIsJumping: 0
   PlayerIsLaunching: 0
   Spawn: {fileID: 0}
@@ -453,6 +455,7 @@ GameObject:
   - component: {fileID: 7673448739196357990}
   - component: {fileID: 7673448739196357991}
   - component: {fileID: 3427788798803802033}
+  - component: {fileID: 6824693302947306194}
   m_Layer: 7
   m_Name: Sprites
   m_TagString: Untagged
@@ -560,6 +563,24 @@ MonoBehaviour:
   ShadowOffset: {x: -0.1, y: -0.05}
   ShadowMaterial: {fileID: 2100000, guid: a27530f165561654996cb6d1be111d6a, type: 2}
   UpdateSprite: 1
+--- !u!114 &6824693302947306194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7673448739196357988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a3185e24b79cb4299d83d637914573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - {fileID: 2133296230928504807, guid: 9266774c5f287464f831387145f63d11, type: 3}
+  - {fileID: 8911791491483335956, guid: c27dd5d084bd3714a9317fbe0dd68848, type: 3}
+  - {fileID: 6996884040598622931, guid: 5a9778b87fe3cee4184b0bda13845c7f, type: 3}
+  - {fileID: 8171506170904860593, guid: 6efb8f31938f645459fb29e3ae86e1af, type: 3}
+  - {fileID: 3375743028069981729, guid: 1993eb5740d5dad45a528ca7789c4092, type: 3}
 --- !u!1 &8279880670390994201
 GameObject:
   m_ObjectHideFlags: 0

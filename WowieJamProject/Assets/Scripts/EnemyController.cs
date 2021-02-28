@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [System.Serializable]
+    public class WaypointSystem
+    {
+        public Transform waypoint;
+        public float waitTime;
+    }
 
-    [SerializeField] Transform[] waypoints;
+    [SerializeField] WaypointSystem[] waypoints;
     int currentWaypoint;
     [SerializeField] float speed;
-    [SerializeField] float CheckpointWaittime;
     bool Moving = true;
     [SerializeField] bool MoveX;
     [SerializeField] bool MoveY;
@@ -26,7 +31,7 @@ public class EnemyController : MonoBehaviour
 
         if (!Moving) return;
 
-        Vector3 target = waypoints[currentWaypoint].position;
+        Vector3 target = waypoints[currentWaypoint].waypoint.position;
         if (!MoveX)
             target.x = transform.position.x;
         if(!MoveY)
@@ -35,7 +40,7 @@ public class EnemyController : MonoBehaviour
         if (transform.position == target)
         {
             Moving = false;
-            Invoke("NextWaypoint", CheckpointWaittime);
+            Invoke("NextWaypoint", waypoints[currentWaypoint].waitTime);
             return;
         }
 
@@ -57,9 +62,9 @@ public class EnemyController : MonoBehaviour
         for(int i = 0; i < waypoints.Length; i++)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawSphere(waypoints[i].position, 0.1f);
+            Gizmos.DrawSphere(waypoints[i].waypoint.position, 0.1f);
             if(i < waypoints.Length - 1)
-                Gizmos.DrawLine(waypoints[i].position, waypoints[i + 1].position);
+                Gizmos.DrawLine(waypoints[i].waypoint.position, waypoints[i + 1].waypoint.position);
         }
     }
 

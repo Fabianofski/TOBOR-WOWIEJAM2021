@@ -825,6 +825,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6599bf3c7571635499cc09ad6fa9c4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popSound: {fileID: 3909741800830872085, guid: 058e5624290f9c44dacbefe06a686f2a, type: 3}
+  clickSound: {fileID: 330354347049902164, guid: 266a95402bfa9d049abb53354dd57050, type: 3}
+  menuButton: {fileID: 0}
+  SettingsButton: {fileID: 0}
+  SoundMixer: {fileID: 24100000, guid: a69ab63b31c28314d81aa69fc586f712, type: 2}
+  MusicMixer: {fileID: 24100000, guid: 8b29b09b52cda7e4f9d299a9eb832a7f, type: 2}
+  MusicVolumeSlider: {fileID: 0}
+  SoundVolumeSlider: {fileID: 0}
+  Fullscreentoggle: {fileID: 0}
 --- !u!1 &731857410711385943
 GameObject:
   m_ObjectHideFlags: 0
