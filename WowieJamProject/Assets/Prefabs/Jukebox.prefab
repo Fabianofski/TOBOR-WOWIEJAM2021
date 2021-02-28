@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5210046819533768675}
   m_Layer: 0
   m_Name: Jukebox
-  m_TagString: Untagged
+  m_TagString: JukeBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,11 +89,9 @@ MonoBehaviour:
     Scenes:
     - Level7
     - Level8
-    - Level9
-    - Level10
   - name: Credits
-    Intro: 1
-    IntroTrack: {fileID: 8300000, guid: bf6f0302fa9ae1343ac5e740ade15bd3, type: 3}
+    Intro: 0
+    IntroTrack: {fileID: 0}
     currentTrack: 0
     Track:
     - {fileID: 8300000, guid: de3828e28ba3aea49b4721db5b3c765e, type: 3}

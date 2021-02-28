@@ -34,7 +34,7 @@ public class JukeBox : MonoBehaviour
 
     private void ChangeArea()
     {
-        if (FindObjectsOfType<JukeBox>().Length > 1)
+        if (GameObject.FindGameObjectWithTag("JukeBox") != gameObject)
             Destroy(gameObject);
 
         audioSource = GetComponent<AudioSource>();
