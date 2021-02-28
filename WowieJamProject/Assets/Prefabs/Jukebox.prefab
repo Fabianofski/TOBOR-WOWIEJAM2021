@@ -54,7 +54,7 @@ MonoBehaviour:
     Scenes:
     - 0_MainMenu
   - name: Tutorial
-    Intro: 0
+    Intro: 1
     IntroTrack: {fileID: 8300000, guid: 0e2a21fd7e092ec4f8f81b3ff7b448ba, type: 3}
     currentTrack: 0
     Track:

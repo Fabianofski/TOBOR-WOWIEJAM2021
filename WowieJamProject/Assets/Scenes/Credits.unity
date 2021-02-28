@@ -9827,8 +9827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -654.02, y: 251.49246}
-  m_SizeDelta: {x: 444.4524, y: 188.7435}
+  m_AnchoredPosition: {x: -586.3666, y: 269.41776}
+  m_SizeDelta: {x: 579.7593, y: 152.8929}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180191140
 MonoBehaviour:
@@ -9852,7 +9852,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Music - Camo
 
-    Art - Ell
+    Art - santumerino
 
     Code - Fabian'
   m_isRightToLeft: 0
@@ -9881,15 +9881,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
