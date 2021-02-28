@@ -44,7 +44,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc9fe3c9e53e934eafc56058f3adbef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songs: []
+  songs:
+  - name: Menu
+    Intro: 1
+    IntroTrack: {fileID: 8300000, guid: a625ed97a7b25594992db62bba285ae5, type: 3}
+    currentTrack: 0
+    Track:
+    - {fileID: 8300000, guid: 5458243c469057a4cb540858797188c2, type: 3}
+    Scenes:
+    - 0_MainMenu
+  - name: Tutorial
+    Intro: 0
+    IntroTrack: {fileID: 8300000, guid: 0e2a21fd7e092ec4f8f81b3ff7b448ba, type: 3}
+    currentTrack: 0
+    Track:
+    - {fileID: 8300000, guid: c7394e56b72157c4ea456a6bf2f654c8, type: 3}
+    Scenes:
+    - Level1
+    - Level2
+    - Level3
+  - name: Atmospheric
+    Intro: 1
+    IntroTrack: {fileID: 8300000, guid: 15ba66856fe59a840845eb6a0e9cc67b, type: 3}
+    currentTrack: 0
+    Track:
+    - {fileID: 8300000, guid: b7d0b3af9663ed949aa4ab1e4d0dc8de, type: 3}
+    - {fileID: 8300000, guid: 8c608ac6746bf23409c013d030881149, type: 3}
+    - {fileID: 8300000, guid: 8c608ac6746bf23409c013d030881149, type: 3}
+    - {fileID: 8300000, guid: 8c608ac6746bf23409c013d030881149, type: 3}
+    - {fileID: 8300000, guid: 8c608ac6746bf23409c013d030881149, type: 3}
+    Scenes:
+    - Level4
+    - Level5
+    - Level6
+  - name: Harder Levels
+    Intro: 1
+    IntroTrack: {fileID: 8300000, guid: bf6f0302fa9ae1343ac5e740ade15bd3, type: 3}
+    currentTrack: 0
+    Track:
+    - {fileID: 8300000, guid: 9c00d49d9f76cd4459dd6dab24e52dd9, type: 3}
+    - {fileID: 8300000, guid: a510c462e0ffb8a4a8afb25b02c9c015, type: 3}
+    - {fileID: 8300000, guid: a510c462e0ffb8a4a8afb25b02c9c015, type: 3}
+    - {fileID: 8300000, guid: a510c462e0ffb8a4a8afb25b02c9c015, type: 3}
+    Scenes:
+    - Level7
+    - Level8
+    - Level9
+    - Level10
+  - name: Credits
+    Intro: 1
+    IntroTrack: {fileID: 8300000, guid: bf6f0302fa9ae1343ac5e740ade15bd3, type: 3}
+    currentTrack: 0
+    Track:
+    - {fileID: 8300000, guid: de3828e28ba3aea49b4721db5b3c765e, type: 3}
+    Scenes:
+    - Credits
 --- !u!82 &5210046819533768675
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56,10 +110,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8b29b09b52cda7e4f9d299a9eb832a7f, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

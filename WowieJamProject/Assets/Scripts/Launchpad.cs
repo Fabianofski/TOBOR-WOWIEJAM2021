@@ -6,6 +6,8 @@ public class Launchpad : MonoBehaviour
 {
     
     [SerializeField] float LaunchForce;
+    [SerializeField] GameObject LaunchSound;
+    [SerializeField] GameObject LaunchParticle;
     Animator animator;
 
     private void Awake()
@@ -42,6 +44,13 @@ public class Launchpad : MonoBehaviour
         }
         rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
         rb2d.AddForce(transform.up * LaunchForce, ForceMode2D.Impulse);
+
+        GameObject sound = Instantiate(LaunchSound, transform.position, Quaternion.identity, transform);
+        sound.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 2f);
+        Destroy(sound, 1f);
+
+        GameObject particle = Instantiate(LaunchParticle, transform.position, Quaternion.identity);
+        Destroy(particle, 2f);
     }
 
 

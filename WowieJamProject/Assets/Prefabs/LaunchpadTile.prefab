@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 35
+  LaunchSound: {fileID: 330354347049902164, guid: 4bf279b20fb87e647b6bcb67fc24ba52, type: 3}
+  LaunchParticle: {fileID: 8506229549742823106, guid: a24aa8ef9ddf3474eb2831a302ca9a81, type: 3}
 --- !u!61 &7289637294809971529
 BoxCollider2D:
   m_ObjectHideFlags: 0

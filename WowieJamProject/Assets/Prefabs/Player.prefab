@@ -241,6 +241,7 @@ MonoBehaviour:
   PlayerIsLaunching: 0
   Spawn: {fileID: 0}
   DeathTile: {fileID: 3547841486187041773, guid: 14bb318553dd93b4ca2ebd0d5701c138, type: 3}
+  DeathSound: {fileID: 330354347049902164, guid: b3d378ce68d37774d8bd5bfb330af328, type: 3}
   DoorLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -299,10 +300,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d1de2786-0a7f-4efe-8d87-e25bbc5405ab
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7e905d8e-b4c9-4369-947d-4f57706bc311
-    m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7673448738922494171}
@@ -375,6 +372,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f28d90f9-29df-4d96-ac4b-159ae4d2fe1f
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7673448738922494171}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 68cdf24e-30f4-4e23-a7d4-3650b49687cf
+    m_ActionName: Player/Restart[/Keyboard/r,/DualShock4GamepadHID/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
         if(!MoveY)
             target.y = transform.position.y;
 
-        if (transform.position == target)
+        if (CompareVector(target, transform.position))
         {
             Moving = false;
             Invoke("NextWaypoint", waypoints[currentWaypoint].waitTime);
@@ -66,6 +66,22 @@ public class EnemyController : MonoBehaviour
             if(i < waypoints.Length - 1)
                 Gizmos.DrawLine(waypoints[i].waypoint.position, waypoints[i + 1].waypoint.position);
         }
+    }
+
+    private bool CompareVector(Vector3 a, Vector3 b)
+    {
+        a = a * 10;
+        b = b * 10;
+
+        a.x = Mathf.RoundToInt(a.x);
+        a.y = Mathf.RoundToInt(a.y);
+        a.z = Mathf.RoundToInt(a.z);
+
+        b.x = Mathf.RoundToInt(b.x);
+        b.y = Mathf.RoundToInt(b.y);
+        b.z = Mathf.RoundToInt(b.z);
+
+        return b == a;
     }
 
 }

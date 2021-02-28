@@ -103,7 +103,7 @@ Rigidbody2D:
   m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 5f043f2a4cb100c4fac7036039218070, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &3547841486187041776

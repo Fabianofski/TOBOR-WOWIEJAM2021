@@ -154,3 +154,5 @@ MonoBehaviour:
   - {fileID: 0}
   PressedSprite: {fileID: 21300000, guid: 21eaa8fc1ffef9e488a8021cc96d342d, type: 3}
   NotPressedSprite: {fileID: 21300000, guid: f27cb83783c6ec14dad187761162fc08, type: 3}
+  ButtonClickSound: {fileID: 330354347049902164, guid: ca7940deac72f7f4580ef9f27ebabe39, type: 3}
+  ButtonParticle: {fileID: 4801083979591813253, guid: cf52494663b9bb04cb66b99380e8e3c0, type: 3}

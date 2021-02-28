@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Death")]
     [SerializeField] GameObject DeathTile;
+    [SerializeField] GameObject DeathSound;
     bool isDying;
     Vector2 startPos;
 
@@ -46,9 +48,7 @@ public class PlayerController : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
         Spawn.GetComponentInChildren<Animator>().SetTrigger("OpenDoor");
-        Spawn.GetComponentInChildren<Animator>().SetTrigger("CloseDoorBehind");
         startPos = transform.position;
     }
 
@@ -137,6 +137,10 @@ public class PlayerController : MonoBehaviour
         FreezeMovement = true;
         transform.position = new Vector2(Mathf.RoundToInt(transform.position.x - .5f) +.5f, transform.position.y);
         Invoke("DestroyPlayer", 1f);
+
+        GameObject sound = Instantiate(DeathSound, transform.position, Quaternion.identity, transform);
+        sound.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 2f);
+        Destroy(sound, 1f);
     }
 
     void DestroyPlayer()
@@ -159,5 +163,11 @@ public class PlayerController : MonoBehaviour
                 collider.GetComponent<Door>().EnterDoor(transform);
         }
 
+    }
+
+    public void RestartGame(InputAction.CallbackContext _context)
+    {
+        if (_context.performed)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

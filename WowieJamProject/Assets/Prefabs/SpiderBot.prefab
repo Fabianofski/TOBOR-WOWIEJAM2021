@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1309892517}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 2941705477169500040}
   - component: {fileID: 2941705477169500041}
   - component: {fileID: 8477026873698097271}
+  - component: {fileID: 1901767786588166133}
   m_Layer: 0
   m_Name: Sprites
   m_TagString: Untagged
@@ -322,6 +323,20 @@ MonoBehaviour:
   ShadowOffset: {x: -0.1, y: -0.05}
   ShadowMaterial: {fileID: 2100000, guid: a27530f165561654996cb6d1be111d6a, type: 2}
   UpdateSprite: 1
+--- !u!114 &1901767786588166133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2941705477169500038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a3185e24b79cb4299d83d637914573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - {fileID: 330354347049902164, guid: 65eb62ce4eec25c4385daa3cfbeea016, type: 3}
 --- !u!1 &2941705477586839493
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +348,7 @@ GameObject:
   - component: {fileID: 2941705477586839492}
   m_Layer: 0
   m_Name: SpiderBot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,9 +434,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - waypoint: {fileID: 0}
+  - waypoint: {fileID: 2941705476744694577}
     waitTime: 0
-  - waypoint: {fileID: 0}
+  - waypoint: {fileID: 2941705476553938040}
     waitTime: 0
   speed: 1.5
   MoveX: 1

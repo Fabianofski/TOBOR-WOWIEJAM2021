@@ -3,7 +3,9 @@ guid: d004685a42fd8074da790729541e47cd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - LaunchSound: {fileID: 330354347049902164, guid: 4bf279b20fb87e647b6bcb67fc24ba52, type: 3}
+  - LaunchParticle: {fileID: 8506229549742823106, guid: a24aa8ef9ddf3474eb2831a302ca9a81, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

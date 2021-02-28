@@ -48,4 +48,5 @@ public class Door : MonoBehaviour
         player.GetComponent<PlayerController>().FreezeMovement = false;
         player.position = TeleportTo.position;
     }
+
 }

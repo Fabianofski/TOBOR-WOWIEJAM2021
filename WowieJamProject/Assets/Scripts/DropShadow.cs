@@ -19,6 +19,7 @@ public class DropShadow : MonoBehaviour
         shadowGameobject = new GameObject("Shadow");
         shadowGameobject.transform.parent = transform;
         shadowGameobject.transform.localPosition = Vector2.zero + ShadowOffset;
+        shadowGameobject.transform.eulerAngles = transform.eulerAngles;
 
         shadowSpriteRenderer = shadowGameobject.AddComponent<SpriteRenderer>();
 
