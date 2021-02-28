@@ -96,8 +96,7 @@ public class UIEvents : MonoBehaviour
 
     public void SelectButton(Button button)
     {
-        if (FindObjectOfType<PlayerInput>().currentControlScheme == "Gamepad")
-            button.Select();
+        button.Select();
     }
 
     public void Quit()

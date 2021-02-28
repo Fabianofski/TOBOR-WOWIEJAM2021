@@ -151,7 +151,6 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Alive");
         FreezeMovement = false;
         Spawn.GetComponentInChildren<Animator>().SetTrigger("OpenDoor");
-        Spawn.GetComponentInChildren<Animator>().SetTrigger("CloseDoorBehind");
     }
 
     public void EnterDoor(InputAction.CallbackContext _context)
