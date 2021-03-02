@@ -99,6 +99,11 @@ public class UIEvents : MonoBehaviour
         button.Select();
     }
 
+    public void SelectSlider(Slider slider)
+    {
+        slider.Select();
+    }
+
     public void Quit()
     {
         Application.Quit();

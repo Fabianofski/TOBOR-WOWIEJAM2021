@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Goal : MonoBehaviour
 {
@@ -24,5 +26,6 @@ public class Goal : MonoBehaviour
     void ActivateEndScreen()
     {
         EndScreen.SetActive(true);
+        EndScreen.GetComponentInChildren<Button>().Select();
     }
 }
