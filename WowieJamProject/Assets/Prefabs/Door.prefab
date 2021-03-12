@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.93333334, g: 0.15294118, b: 0.18431373, a: 1}
   m_Intensity: 0.8
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000d9f63cdc99df096d
+  m_ApplyToSortingLayers: 0000000099df096df3aac3b3
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -599984423
+  m_SortingLayerID: -1279022349
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 436563815456543028, guid: 03daba302c91b1c42b6a6e1754802413, type: 3}
@@ -191,6 +191,7 @@ MonoBehaviour:
   DoorRingSound: {fileID: 330354347049902164, guid: d72c33f62d9d3684480d9ab1df90d130, type: 3}
   DoorSound: {fileID: 330354347049902164, guid: 0c541ef9d5eeaa2448fd3e7db7cab4c0, type: 3}
   RandomPitch: 1
+  spriteRenderer: {fileID: 7591422158994764846}
 --- !u!1 &7591422159268201693
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +205,8 @@ GameObject:
   - component: {fileID: 4194841773769217137}
   - component: {fileID: 7649364497555024251}
   - component: {fileID: 4115867583146246650}
+  - component: {fileID: 5166286636670515526}
+  - component: {fileID: 5465528062852871273}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -263,7 +266,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -599984423
+  m_SortingLayerID: -1279022349
   m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: -2278374905836209024, guid: 1a884fd07f09ad24a9ceb6d91a034f69, type: 3}
@@ -289,7 +292,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47875e20d3e0a049ba845d67bee99a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TeleportTo: {fileID: 0}
+  TeleportTo: {fileID: 7591422159268201683}
+  ButtonPressedEvent: {fileID: 5465528062852871273}
 --- !u!61 &7649364497555024251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,3 +335,67 @@ MonoBehaviour:
   ShadowOffset: {x: -0.1, y: -0.05}
   ShadowMaterial: {fileID: 2100000, guid: a27530f165561654996cb6d1be111d6a, type: 2}
   UpdateSprite: 0
+--- !u!61 &5166286636670515526
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591422159268201693}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.25, y: 0.75}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.33333334, y: 0}
+    oldSize: {x: 1.5, y: 1.5}
+    newSize: {x: 1.5, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5}
+  m_EdgeRadius: 0
+--- !u!114 &5465528062852871273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591422159268201693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6ab7cbc45164d19b20476265c251c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _developerDescription: 
+  _unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4194841773769217137}
+        m_TargetAssemblyTypeName: Door, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actionResponses: []
+  _conditions: []
+  _operator: 0
+  _replayEventBufferOnRegister: 1
+  _eventReference:
+    _usage: 3
+    _event: {fileID: 0}
+    _eventInstancer: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}

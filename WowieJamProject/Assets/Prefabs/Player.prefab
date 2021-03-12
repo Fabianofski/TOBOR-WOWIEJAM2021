@@ -239,7 +239,14 @@ MonoBehaviour:
   JumpParticle: {fileID: 8506229549742823106, guid: a24aa8ef9ddf3474eb2831a302ca9a81, type: 3}
   PlayerIsJumping: 0
   PlayerIsLaunching: 0
-  Spawn: {fileID: 0}
+  SpawnPlayerEvent:
+    _usage: 0
+    _event: {fileID: 11400000, guid: 5bd4b0f988db7214bb425b24f855708f, type: 2}
+    _eventInstancer: {fileID: 0}
+    _collection: {fileID: 0}
+    _list: {fileID: 0}
+    _collectionInstancer: {fileID: 0}
+    _listInstancer: {fileID: 0}
   DeathTile: {fileID: 3547841486187041773, guid: 14bb318553dd93b4ca2ebd0d5701c138, type: 3}
   DeathSound: {fileID: 330354347049902164, guid: b3d378ce68d37774d8bd5bfb330af328, type: 3}
   DoorLayer:

@@ -1,31 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!61 &6663550841591173159
-BoxCollider2D:
+--- !u!114 &1992989691513308498
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038085355757415129}
+  m_GameObject: {fileID: 7436044529930577917}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.25, y: 0.75}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.33333334, y: 0}
-    oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1.5, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b8675a4f46440369248598e656cfbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inMemoryCopy: {fileID: 0}
+  _base: {fileID: 11400000, guid: 29f7364446256fc479f0a99bfc237ad5, type: 2}
 --- !u!1 &7436044531329326692
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +99,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5957158497389078658, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+      propertyPath: ButtonPressedPos.y
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957158497389078658, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+      propertyPath: ButtonPressedSize.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957158497389078658, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+      propertyPath: ButtonPressedSize.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957158497389078658, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
       propertyPath: doors.Array.data[0]
       value: 
       objectReference: {fileID: 6702817789297212021}
@@ -118,12 +118,21 @@ PrefabInstance:
       propertyPath: doors.Array.data[1]
       value: 
       objectReference: {fileID: 6702817789546579161}
+    - target: {fileID: 5957158497389078658, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+      propertyPath: ButtonPressedVariable
+      value: 
+      objectReference: {fileID: 1992989691513308498}
     - target: {fileID: 5957158497389078663, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+--- !u!1 &7436044529930577917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5957158497389078663, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
+  m_PrefabInstance: {fileID: 3863586061182357370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7436044529930577914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5957158497389078656, guid: 15efd441fc29eb545989ec7d8b7fcef2, type: 3}
@@ -140,6 +149,10 @@ PrefabInstance:
       propertyPath: TeleportTo
       value: 
       objectReference: {fileID: 1038085355757415127}
+    - target: {fileID: 5465528062852871273, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
+      propertyPath: _eventReference._variableInstancer
+      value: 
+      objectReference: {fileID: 1992989691513308498}
     - target: {fileID: 7591422159268201682, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -150,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7591422159268201682, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
       propertyPath: m_SortingLayerID
-      value: -599984423
+      value: -1279022349
       objectReference: {fileID: 0}
     - target: {fileID: 7591422159268201683, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
       propertyPath: m_RootOrder
@@ -233,6 +246,10 @@ PrefabInstance:
       propertyPath: TeleportTo
       value: 
       objectReference: {fileID: 1038085356040868987}
+    - target: {fileID: 5465528062852871273, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
+      propertyPath: _eventReference._variableInstancer
+      value: 
+      objectReference: {fileID: 1992989691513308498}
     - target: {fileID: 7591422158994764846, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -289,13 +306,12 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 8521959267010426488, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
+      propertyPath: _eventReference._variableInstancer
+      value: 
+      objectReference: {fileID: 1992989691513308498}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
---- !u!1 &1038085355757415129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7591422159268201693, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
-  m_PrefabInstance: {fileID: 7436044529775504900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1038085355757415127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7591422159268201683, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
@@ -306,7 +322,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4194841773769217137, guid: 59cd551cd42bbcf4a927de2686e13ad2, type: 3}
   m_PrefabInstance: {fileID: 7436044529775504900}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1038085355757415129}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f47875e20d3e0a049ba845d67bee99a3, type: 3}
