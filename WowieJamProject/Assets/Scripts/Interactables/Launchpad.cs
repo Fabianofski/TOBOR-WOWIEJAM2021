@@ -20,40 +20,39 @@ public class Launchpad : MonoBehaviour
         Launch(collision);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Launch(collision);
-    }
-
-    private void Launch(Collider2D collision)
+    private void Launch(Collider2D _collision)
     {
         animator.SetTrigger("Launch");
 
-        Rigidbody2D rb2d = collision.GetComponent<Rigidbody2D>();
-        if (collision.GetComponent<PlayerController>())
+        Rigidbody2D _rb2d = _collision.GetComponent<Rigidbody2D>();
+        PlayerController _playerController = _collision.GetComponent<PlayerController>();
+
+        if (_playerController)
         {
-            collision.GetComponentInChildren<Animator>().SetTrigger("JumpPad");
-            collision.GetComponent<PlayerController>().PlayerIsLaunching = true;
+            // Launch Player
+            _collision.GetComponentInChildren<Animator>().SetTrigger("JumpPad");
+            _playerController.PlayerIsLaunching = true;
         }
         else
         {
-            collision.transform.parent = null;
-            Vector3 pos = collision.transform.position + transform.up * .5f;
-            collision.transform.position = pos;
-            collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            // Launch Playerbox
+            _collision.transform.parent = null;
+            Vector3 pos = transform.position + transform.up;
+            _collision.transform.position = pos;
+            _rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
-        rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
-        rb2d.AddForce(transform.up * LaunchForce, ForceMode2D.Impulse);
 
+        // Add Force
+        _rb2d.velocity = new Vector2(_rb2d.velocity.x, 0);
+        _rb2d.AddForce(transform.up * LaunchForce, ForceMode2D.Impulse);
+
+        // Play Sound
         GameObject sound = Instantiate(LaunchSound, transform.position, Quaternion.identity, transform);
         sound.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 2f);
         Destroy(sound, 1f);
 
+        // Instantiate Particle
         GameObject particle = Instantiate(LaunchParticle, transform.position, Quaternion.identity);
         Destroy(particle, 2f);
     }
-
-
-
-
 }
