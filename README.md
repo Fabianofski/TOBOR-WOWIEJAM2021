@@ -36,6 +36,6 @@ To open the project do the following:
 2. In Unity Hub install Unity Version 2021.3.4f1
 3. Clone the repo
    ```sh
-   git clone https://github.com/Fabianofski/WowieJam.git
+   git clone https://github.com/Fabianofski/TOBOR-WOWIEJAM2021.git
    ```
 4. Open the Project in Unity Hub
